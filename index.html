@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProcessPilot | Automacione Profesionale</title>
+<meta name="description" content="Automacione profesionale me Python & AI për biznese dhe startup-e.">
+<style>
+:root {
+    --bg: #f8f9fa;
+    --surface: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --primary: #2563eb;
+    --border: #d1d5db;
+}
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, sans-serif; background-color: var(--bg); color: var(--text); line-height:1.6; }
+header { padding:80px 20px; text-align:center; border-bottom:1px solid var(--border); position:relative; }
+header h1 { margin-bottom:12px; font-size:2.4rem; font-weight:600; }
+header p { max-width:620px; margin:0 auto 24px; color:var(--muted); font-size:1.05rem; }
+.lang-btn { position:absolute; top:20px; right:20px; padding:6px 12px; border:1px solid var(--border); border-radius:4px; background:white; cursor:pointer; font-size:0.9rem; }
+.btn { padding:12px 28px; border-radius:6px; text-decoration:none; font-weight:500; transition:0.2s; display:inline-block; margin:4px; }
+.btn-primary { background:var(--primary); color:white; }
+.btn-primary:hover { opacity:0.9; }
+section { max-width:1000px; margin:auto; padding:70px 20px; border-bottom:1px solid var(--border); }
+h2 { font-size:1.9rem; margin-bottom:20px; font-weight:600; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; }
+.card { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:24px; }
+.card h3 { margin-top:0; margin-bottom:12px; font-weight:600; }
+ul, ol { padding-left:20px; margin:0; }
+li { margin-bottom:10px; color:var(--muted); }
+footer { text-align:center; padding:40px 20px; font-size:0.9rem; color:var(--muted); }
+a { color:var(--primary); text-decoration:none; }
+form { background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:24px; max-width:600px; margin:auto; display:flex; flex-direction:column; gap:14px; }
+input, textarea { padding:10px; border:1px solid var(--border); border-radius:4px; font-size:1rem; }
+input:focus, textarea:focus { outline:none; border-color:var(--primary); }
+form button { background:var(--primary); color:white; border:none; padding:12px; font-size:1rem; border-radius:6px; cursor:pointer; }
+form button:hover { opacity:0.9; }
+</style>
+</head>
+<body>
+
+<button class="lang-btn" onclick="toggleLang()">EN</button>
+
+<header>
+<h1 id="title">ProcessPilot</h1>
+<p id="subtitle">Automatizoj procese biznesi me programim dhe inteligjencë artificiale, duke rritur efikasitetin dhe ulur kostot operative.</p>
+<a href="https://wa.me/38978678800" target="_blank" class="btn btn-primary" id="whatsapp-btn">Kontakto WhatsApp</a>
+<a href="mailto:hello.processpilot@gmail.com" class="btn" id="email-btn">Kontakto Email</a>
+</header>
+
+<section>
+<h2 id="why-title">Pse automatizimi?</h2>
+<ul id="why-list">
+<li>Procese manuale që konsumojnë kohë</li>
+<li>Gabime të shpeshta në detyra të përsëritura</li>
+<li>Mungesë shkallëzimi operacional</li>
+</ul>
+</section>
+
+<section>
+<h2 id="services-title">Shërbimet</h2>
+<div class="grid">
+<div class="card"><h3 id="service1-title">Automacione me Python & AI</h3><p id="service1-text">Zgjidhje të personalizuara për automatizimin e proceseve të brendshme dhe operacioneve ditore.</p></div>
+<div class="card"><h3 id="service2-title">Integrime Sistemi</h3><p id="service2-text">Lidhje të sigurta midis aplikacioneve, API-ve dhe platformave ekzistuese.</p></div>
+<div class="card"><h3 id="service3-title">Menaxhim i të Dhënave</h3><p id="service3-text">Automatizim i Excel, Google Sheets, Notion dhe raporteve operative.</p></div>
+<div class="card"><h3 id="service4-title">Workflow & Komunikim</h3><p id="service4-text">Automatizim i email-eve dhe flukseve të punës nga fillimi në fund.</p></div>
+</div>
+</section>
+
+<section>
+<h2 id="process-title">Procesi i Punës</h2>
+<ol id="process-list">
+<li>Analizë e proceseve ekzistuese</li>
+<li>Dizajnim i zgjidhjes</li>
+<li>Zbatim teknik</li>
+<li>Testim dhe dorëzim</li>
+</ol>
+</section>
+
+<section>
+<h2 id="contact-title">Kontakto</h2>
+<form action="mailto:hello.processpilot@gmail.com" method="post" enctype="text/plain">
+<input type="text" name="name" id="name" placeholder="Emri / Name" required>
+<input type="email" name="email" id="email" placeholder="Email" required>
+<textarea name="message" id="message" placeholder="Mesazhi / Message" rows="5" required></textarea>
+<button type="submit" id="form-btn">Dërgo / Send</button>
+</form>
+</section>
+
+<footer>
+© 2025 – ProcessPilot
+</footer>
+
+<script>
+let lang='sq';
+function toggleLang(){
+if(lang==='sq'){lang='en';
+document.getElementById('title').textContent="ProcessPilot";
+document.getElementById('subtitle').textContent="We automate business processes with programming and artificial intelligence, increasing efficiency and reducing operational costs.";
+document.getElementById('whatsapp-btn').textContent="Contact WhatsApp";
+document.getElementById('email-btn').textContent="Contact Email";
+document.getElementById('why-title').textContent="Why Automation?";
+document.getElementById('why-list').innerHTML="<li>Manual processes that consume time</li><li>Frequent errors in repetitive tasks</li><li>Lack of operational scalability</li>";
+document.getElementById('services-title').textContent="Services";
+document.getElementById('service1-title').textContent="Python & AI Automation";
+document.getElementById('service1-text').textContent="Custom solutions for automating internal processes and daily operations.";
+document.getElementById('service2-title').textContent="System Integrations";
+document.getElementById('service2-text').textContent="Secure connections between applications, APIs, and existing platforms.";
+document.getElementById('service3-title').textContent="Data Management";
+document.getElementById('service3-text').textContent="Automation for Excel, Google Sheets, Notion, and operational reports.";
+document.getElementById('service4-title').textContent="Workflow & Communication";
+document.getElementById('service4-text').textContent="Automation of emails and workflows from start to finish.";
+document.getElementById('process-title').textContent="Work Process";
+document.getElementById('process-list').innerHTML="<li>Analysis of existing processes</li><li>Solution design</li><li>Technical implementation</li><li>Testing and delivery</li>";
+document.getElementById('contact-title').textContent="Contact";
+document.getElementById('name').placeholder="Name";
+document.getElementById('email').placeholder="Email";
+document.getElementById('message').placeholder="Message";
+document.getElementById('form-btn').textContent="Send";
+document.querySelector('.lang-btn').textContent='Shqip';
+}else{
+lang='sq';
+document.getElementById('title').textContent="ProcessPilot";
+document.getElementById('subtitle').textContent="Automatizoj procese biznesi me programim dhe inteligjencë artificiale, duke rritur efikasitetin dhe ulur kostot operative.";
+document.getElementById('whatsapp-btn').textContent="Kontakto WhatsApp";
+document.getElementById('email-btn').textContent="Kontakto Email";
+document.getElementById('why-title').textContent="Pse automatizimi?";
+document.getElementById('why-list').innerHTML="<li>Procese manuale që konsumojnë kohë</li><li>Gabime të shpeshta në detyra të përsëritura</li><li>Mungesë shkallëzimi operacional</li>";
+document.getElementById('services-title').textContent="Shërbimet";
+document.getElementById('service1-title').textContent="Automacione me Python & AI";
+document.getElementById('service1-text').textContent="Zgjidhje të personalizuara për automatizimin e proceseve të brendshme dhe operacioneve ditore.";
+document.getElementById('service2-title').textContent="Integrime Sistemi";
+document.getElementById('service2-text').textContent="Lidhje të sigurta midis aplikacioneve, API-ve dhe platformave ekzistuese.";
+document.getElementById('service3-title').textContent="Menaxhim i të Dhënave";
+document.getElementById('service3-text').textContent="Automatizim i Excel, Google Sheets, Notion dhe raporteve operative.";
+document.getElementById('service4-title').textContent="Workflow & Komunikim";
+document.getElementById('service4-text').textContent="Automatizim i email-eve dhe flukseve të punës nga fillimi në fund.";
+document.getElementById('process-title').textContent="Procesi i Punës";
+document.getElementById('process-list').innerHTML="<li>Analizë e proceseve ekzistuese</li><li>Dizajnim i zgjidhjes</li><li>Zbatim teknik</li><li>Testim dhe dorëzim</li>";
+document.getElementById('contact-title').textContent="Kontakto";
+document.getElementById('name').placeholder="Emri / Name";
+document.getElementById('email').placeholder="Email";
+document.getElementById('message').placeholder="Mesazhi / Message";
+document.getElementById('form-btn').textContent="Dërgo / Send";
+document.querySelector('.lang-btn').textContent='EN';
+}}
+</script>
+
+</body>
+</html>
